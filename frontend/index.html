@@ -28,9 +28,59 @@
       rel="stylesheet"
     />
     <title>EhParkLeh — Find parking near you</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EhParkLeh",
+        "description": "Find parking near you in Singapore, right now. Search carparks and compare live availability, rates, free-parking rules, and EV charging.",
+        "url": "https://ehparkleh.vercel.app/",
+        "isAccessibleForFree": true
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main>
+        <h1>EhParkLeh: find parking near you in Singapore</h1>
+        <p>
+          Search a destination or use Near me to list carparks around you on a map. Compare
+          them by live lot counts, rates, parking rules, and amenities. The dataset covers
+          more than 3,500 carparks across Singapore, from HDB estates and URA street lots to
+          malls and private car parks.
+        </p>
+        <h2>Live carpark availability</h2>
+        <p>
+          Lot counts come from the data.gov.sg carpark availability feed and refresh about
+          once a minute. Each count is labelled Live, Recent, or Saved, so an older number is
+          never shown as current. Carparks the feed does not cover carry a No live data chip
+          instead of a guess.
+        </p>
+        <h2>HDB, mall, street, and private parking</h2>
+        <p>
+          Filter results to HDB estates, shopping malls, street carparks, or private car
+          parks, and narrow the search radius. An OpenStreetMap layer adds further parking
+          spots on unfiltered searches; it is hidden while a filter is on so nothing appears
+          as a match the data cannot verify.
+        </p>
+        <h2>Rates and free Sunday parking</h2>
+        <p>
+          Every carpark card shows its resolved rate where one is known, along with parsed
+          free-parking rules. One filter keeps only carparks that are free on Sundays and
+          public holidays.
+        </p>
+        <h2>EV charging</h2>
+        <p>
+          Filter to carparks with EV charging. Site flags and connector counts come from LTA
+          DataMall, with live connector availability when that feed is configured.
+        </p>
+        <h2>What EhParkLeh does not do</h2>
+        <p>
+          EhParkLeh finds parking. It does not handle payment, booking, or accounts. The app
+          is free to use.
+        </p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
