@@ -70,7 +70,7 @@ export function FilterBar({
 }: Props) {
   return (
     <div className="relative">
-      <div className="no-scrollbar -mx-4 flex items-center gap-2 overflow-x-auto px-4 py-2.5 sm:mx-0 sm:px-0">
+      <div className="no-scrollbar -mx-4 flex items-center gap-2 overflow-x-auto overscroll-x-contain px-4 py-2.5 sm:mx-0 sm:px-0">
         <div className="flex shrink-0 items-center gap-2" role="group" aria-label="Carpark category">
           {CATEGORY_CHIPS.map((c) => (
             <Chip key={c.label} active={category === c.value} onClick={() => onCategory(c.value)}>

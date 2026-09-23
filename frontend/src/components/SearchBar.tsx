@@ -320,7 +320,7 @@ export function SearchBar({
             dropdown attached to the field it belongs to. */}
         {showPanel && (
           <div className="absolute top-[calc(100%+0.5rem)] right-0 left-0 z-30 flex max-h-[calc(100vh-11rem)] flex-col overflow-hidden rounded-lg border-[1.5px] border-hairline bg-popover shadow-lg sm:max-h-[26rem]">
-            <ul id={LISTBOX_ID} role="listbox" className="min-h-0 flex-1 overflow-y-auto">
+            <ul id={LISTBOX_ID} role="listbox" className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
               {showRecents && (
                 <>
                   <SectionLabel>
