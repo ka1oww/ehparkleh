@@ -105,6 +105,10 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Crawlable landing copy. Search engines index the HTML served here, before
+         any JavaScript runs, so this section (and the JSON-LD in <head>) must stay
+         static and outside #root: React replaces the root's contents on mount.
+         src/landing.test.ts pins this layout and the heading set. -->
     <section id="ehparkleh-about" aria-label="About EhParkLeh">
       <div class="about-inner">
         <h1>EhParkLeh: find parking near you in Singapore</h1>
