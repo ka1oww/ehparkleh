@@ -1124,7 +1124,7 @@ export default function App() {
           <section
             aria-label={showingSaved ? 'Saved carparks' : 'Carpark list'}
             className={cn(
-              'min-h-0 w-full flex-1 flex-col overflow-y-auto bg-background md:flex',
+              'min-h-0 w-full flex-1 flex-col overflow-y-auto overscroll-contain bg-background md:flex',
               listHidden ? 'hidden' : 'flex',
             )}
           >
